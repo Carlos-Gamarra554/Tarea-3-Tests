@@ -16,8 +16,10 @@ class FormaTest {
 
     @Test
     void testArea() {
-        assertEquals(4 * Math.PI * Math.pow(esfera.getRadio(), 2), esfera.area());
-        assertEquals(2 * Math.PI * cilindro.getRadio() * (cilindro.getRadio() + cilindro.getAltura()), cilindro.area());
-        assertEquals(rectangulo.getLongitud() * rectangulo.getAncho(), rectangulo.area());
+        double error = 0.01;
+
+        assertEquals(254.46, esfera.area(), error);
+        assertEquals(534.07, cilindro.area(), error);
+        assertEquals(7.19, rectangulo.area(), error);
     }
 }
