@@ -8,6 +8,10 @@ class PinturaTest {
         Forma esfera = new Esfera(5.6);
         Pintura pintura = new Pintura(500);
 
-        assertEquals(esfera.area() / pintura.getCobertura(), pintura.pintar(esfera));
+        double expected = 0.788;
+        double actual = pintura.pintar(esfera);
+        double margenError = 0.001;
+
+        assertEquals(expected, actual, margenError, "El valor no es correcto.");
     }
 }
